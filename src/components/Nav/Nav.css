@@ -1,0 +1,20 @@
+.is-active {
+  background-color: grey;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: left;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 5px;
+  flex-grow: 10;
+}
+
+.navbar {
+  align-content: flex-start;
+}
