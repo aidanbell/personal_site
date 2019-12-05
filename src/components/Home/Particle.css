@@ -13,7 +13,7 @@ canvas {
 #particles-js {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vmin;
   z-index: 0;
   background-color: #042252;
   background-repeat: no-repeat;

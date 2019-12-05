@@ -8,7 +8,7 @@ class Nav extends Component {
   render() {
     return(
       <nav className="navbar fixed-top navbar-dark bg-dark">
-        <a className="navbar-brand" href="/">ab</a>
+        <a className="navbar-brand" href="/">/ab/</a>
         <ScrollspyNav
           scrollTargetIds={["Home", "About", "Projects", "Contact"]}
           activeNavClass="is-active"

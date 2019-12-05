@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Me from '../../images/me.png';
+import Me from '../../assets/images/me.png';
 
 import './Home.css';
 import './Particle.css';
