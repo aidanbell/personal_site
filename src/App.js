@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Nav from './components/Nav/Nav';
 import About from './components/About/About';
+import Home from './components/Home/Home';
 
 import './App.css';
 
@@ -11,11 +12,14 @@ class App extends Component {
       <div>
         <Nav />
         <div className="App">
-          <div className="scroll-div" id="section_1">
+          <div className="scroll-div" id="Home">
+            <Home />
+          </div>
+          <div className="scroll-div" id="About">
             <About />
           </div>
-          <div className="scroll-div" id="section_2" style={{"height": "1000px"}}><span>Section 2</span></div>
-          <div className="scroll-div" id="section_3" style={{"height": "1000px"}}><span>Section 3</span></div>
+          <div className="scroll-div" id="Projects" style={{"height": "1000px"}}><span>Projects</span></div>
+          <div className="scroll-div" id="Contact" style={{"height": "1000px"}}><span>Contact</span></div>
         </div>
       </div>
     );

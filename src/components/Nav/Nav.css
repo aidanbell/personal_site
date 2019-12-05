@@ -18,3 +18,9 @@
 .navbar {
   align-content: flex-start;
 }
+
+.navbar-brand {
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+}
