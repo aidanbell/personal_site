@@ -1,0 +1,24 @@
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30vmin;
+  margin: auto;
+  z-index: 2;
+  background-color: white;
+  margin: auto;
+  width: 20%;
+}
+
+.About {
+  text-align: center;
+}
+
+.photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 5px 10px grey;
+  border: 1px solid grey;
+}
