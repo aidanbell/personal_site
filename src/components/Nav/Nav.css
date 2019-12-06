@@ -17,6 +17,8 @@
 
 .navbar {
   align-content: flex-start;
+  top: -100px;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
 .navbar-brand {

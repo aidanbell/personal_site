@@ -13,7 +13,7 @@
 .nav-link {
   border: none;
   color: inherit;
-  font-size: 30px;
+  font-size: 2vw;
 }
 
 .active {
@@ -24,7 +24,7 @@
 .tab-content {
   margin: auto;
   width: 60%;
-  font-size: 30px;
+  font-size: 2vw;
   font-style: italic;
   color: rgb(128, 128, 128);
   text-align: justify;
