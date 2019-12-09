@@ -4,7 +4,7 @@ import './About.css';
 
 function About() {
   return(
-    <div class="About">
+    <div class="About scrollToHere">
       <div class="Nav">
         <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
           <li class="nav-item">
@@ -18,7 +18,6 @@ function About() {
           </li>
         </ul>
       </div>
-      <div class="vr"></div>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="brand" role="tabpanel" aria-labelledby="home-tab">
           "Curious and detail-oriented, I tend to approach problems with

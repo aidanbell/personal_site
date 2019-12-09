@@ -8,15 +8,28 @@ import Projects from './components/Projects/Projects';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.scrollRef = React.createRef();
+
+  };
+
+  scroll(ref) {
+    ref.current.scrollIntoView({behavior: 'smooth'})
+  }
+  
   render() {
     return (
       <div>
         <Nav />
         <div className="App">
           <div className="scroll-div" id="Home">
-            <Home />
+            <Home
+              scroll={this.scroll}
+              scrollRef={this.scrollRef}
+            />
           </div>
-          <div className="scroll-div" id="About">
+          <div className="scroll-div" id="About" ref={this.scrollRef}>
             <About />
           </div>
           <div className="scroll-div" id="Projects">

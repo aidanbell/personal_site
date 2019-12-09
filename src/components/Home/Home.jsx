@@ -10,9 +10,9 @@ class Home extends Component {
       <div class="Home">
         <div id="particles-js">
           <div class="home-container">
-            <img class="photo" src={Me} alt="me.png" />
-            <h1 class="name">Aidan Bell</h1>
+            <h1 class="name">/ab/</h1>
           </div>
+          <i class="material-icons" style={{fontSize: '102px'}} onClick={() => {this.props.scroll(this.props.scrollRef)}}>arrow_downward</i>
         </div>
       </div>
     )
