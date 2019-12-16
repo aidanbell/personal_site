@@ -11,13 +11,14 @@ function About() {
             <a class="nav-link active" id="brand-tab" data-toggle="tab" href="#brand" role="tab" aria-controls="brand" aria-selected="true">Me:</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#technologies" role="tab" aria-controls="technologies" aria-selected="false">Technologies:</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
           </li>
         </ul>
       </div>
+      <div class="vr"></div>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="brand" role="tabpanel" aria-labelledby="home-tab">
           "Curious and detail-oriented, I tend to approach problems with
@@ -28,11 +29,35 @@ function About() {
           of software engineering as one in which I have room to grow, and
           satiate my desire to never stop learning."
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
+        <div class="tab-pane fade" id="technologies" role="tabpanel" aria-labelledby="technologies-tab">
+          <div class="languages">
+            <h2>Front End:</h2>
+            <i class="logo devicon-html5-plain-wordmark"></i>
+            <i class="logo devicon-css3-plain-wordmark"></i>
+            <i class="logo devicon-javascript-plain"></i>
+          </div>
+          <div class="languages">
+            <h2>Back End:</h2>
+            <i class="logo devicon-python-plain-wordmark"></i>
+            <i class="logo devicon-mongodb-plain-wordmark"></i>
+            <i class="logo devicon-postgresql-plain-wordmark"></i>
+          </div>
+          <div class="languages">
+            <h2>Frameworks:</h2>
+            <i class="logo devicon-express-original-wordmark"></i>
+            <i class="logo devicon-react-original-wordmark"></i>
+            <i class="logo devicon-nodejs-plain-wordmark"></i>
+            <i class="logo devicon-django-plain"></i>
+          </div>
+          <h2>Technologies/Tools:</h2>
+          Socket.io, OAuth2, Token & Session-based Auth
         </div>
         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-          3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt mi nec scelerisque accumsan. Nulla at tellus molestie, semper ipsum sed, ullamcorper nibh. Duis vel lorem convallis, cursus metus sit amet, elementum libero. Pellentesque pellentesque, est vitae facilisis porttitor, lorem est sollicitudin magna, sit amet egestas mauris elit eget nibh. Sed ac bibendum justo. Nulla mattis eget ante id lacinia. Praesent elementum odio quis ornare lacinia. Quisque et diam sem. Integer sollicitudin felis quis mattis faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed dictum ante nisi, nec varius elit dignissim quis. Fusce at blandit libero. Duis tristique dictum urna.
+          <br/>
+          <br/>
+          <br/>
+          <i class="logo devicon-linux-plain"></i>
+          <i class="logo devicon-git-plain-wordmark"></i>
         </div>
       </div>
     </div>

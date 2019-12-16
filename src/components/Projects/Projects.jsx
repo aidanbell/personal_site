@@ -32,10 +32,41 @@ function Projects() {
             </div>
           </div>
           <div class="carousel-item">
-            <div class="inner2"></div>
+            <div class="inner2">
+              <div class="content">
+                <h2>Let's Grab Drinks</h2>
+                <h3>Technologies Used:</h3>
+                <h4>Python, Django, PostgreSQL</h4>
+                <h3>The Idea:</h3>
+                <p>
+                  The concept of the project was to create a tool what would simplify the
+                  process of organizing a group of friends to meet up for drinks. My teammate
+                  and I wanted a one-stop webapp where users could log in, create events, and
+                  invite their friends to attend, or weigh-in on the location or time to help
+                  find something that works for everyone. We implimented a messaging feature
+                  to allow attendees to easily communicate with eachother.
+                </p>
+              </div></div>
           </div>
           <div class="carousel-item">
-            <div class="inner3"></div>
+            <div class="inner3">
+              <div class="content">
+                <h2>The Cage Page</h2>
+                <h3>Technologies Used:</h3>
+                <h4>Node.js, Express.js, MongoDB, OAuth2, APIs</h4>
+                <h3>The Idea:</h3>
+                <p>
+                  About two years ago, a group of friends and I started on a journey to watch
+                  as many terrible Nicholas Cage movies as we could stomach. We quickly
+                  discovered that the only way that we would survive the ordeal was if we came
+                  up with a drinking game to go alongside each movie. Using the OMDB API, I
+                  created a tool that would not only help us accomplish this, but also would allow
+                  us to share our misery with others. The Cage Page allows users to view a list of
+                  all of Nicholas Cages movies, along with a synopsis and rating, add them to their
+                  own personal "Watched" list, and then add drinking game rules for those movies.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
