@@ -1,20 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+import ImageLoader from '../ImageLoader/ImageLoader';
 
 import './Projects.css';
 
-function Projects() {
+class Projects extends Component {
+  constructor() {
+    super();
+    this.state = {
+      drinksImages: ImageLoader(),
+      photoIndex: 0,
+      isOpen: false
+    }
+  }
+
+  render() {
+  const { photoIndex, isOpen } = this.state;
+  const styles = {
+    content: {
+      top: '10%'
+    }
+  }
   return(
-    <div class="Projects">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <div className="Projects">
+      <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
+        <ol className="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="inner1">
-              <div class="content">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="inner1">
+              <div className="content">
                 <h2>Tattoo Shop</h2>
                 <h3>Technologies Used:</h3>
                 <h4>React.js, Express.js, MongoDB, Token-Based Auth</h4>
@@ -31,9 +50,9 @@ function Projects() {
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="inner2">
-              <div class="content">
+          <div className="carousel-item">
+            <div className="inner2">
+              <div className="content">
                 <h2>Let's Grab Drinks</h2>
                 <h3>Technologies Used:</h3>
                 <h4>Python, Django, PostgreSQL</h4>
@@ -46,11 +65,35 @@ function Projects() {
                   find something that works for everyone. We implimented a messaging feature
                   to allow attendees to easily communicate with eachother.
                 </p>
-              </div></div>
+                <div>
+                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.drinksImages[0].src} onClick={() => this.setState({ isOpen: true })}/>
+
+                  {isOpen && (
+                    <Lightbox
+                      mainSrc={this.state.drinksImages[photoIndex].src}
+                      nextSrc={this.state.drinksImages[(photoIndex + 1) % this.state.drinksImages.length].src}
+                      prevSrc={this.state.drinksImages[(photoIndex + this.state.drinksImages.length - 1) % this.state.drinksImages.length].src}
+                      onCloseRequest={() => this.setState({ isOpen: false })}
+                      onMovePrevRequest={() =>
+                        this.setState({
+                          photoIndex: (photoIndex + this.state.drinksImages.length - 1) % this.state.drinksImages.length,
+                        })
+                      }
+                      onMoveNextRequest={() =>
+                        this.setState({
+                          photoIndex: (photoIndex + 1) % this.state.drinksImages.length,
+                        })
+                      }
+                      reactModalStyle={styles}
+                    />
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="carousel-item">
-            <div class="inner3">
-              <div class="content">
+          <div className="carousel-item">
+            <div className="inner3">
+              <div className="content">
                 <h2>The Cage Page</h2>
                 <h3>Technologies Used:</h3>
                 <h4>Node.js, Express.js, MongoDB, OAuth2, APIs</h4>
@@ -69,17 +112,18 @@ function Projects() {
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
         </a>
       </div>
     </div>
-  )
+    )
+  }
 }
 
 export default Projects;
