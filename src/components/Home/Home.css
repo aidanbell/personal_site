@@ -23,11 +23,11 @@
 }
 
 #down {
+  margin: 0 auto;
   position: absolute;
   bottom: 0;
   color: rgba(214, 214, 214, 0.7);
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(214, 214, 214);
-  font-size: 5vw;
 }

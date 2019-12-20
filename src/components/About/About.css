@@ -27,7 +27,7 @@
   font-size: 2vw;
   font-style: italic;
   font-weight: lighter;
-  color: rgb(128, 128, 128);
+  color: #343A40;
   text-align: justify;
 }
 
@@ -40,11 +40,33 @@
 }
 
 .logo {
-  font-size: 3em;
+  font-size: 2em;
   border: 1px solid black;
   color: white;
   background-color: #343A40;
   padding: 5px;
   margin: 3px;
+}
 
+h2 {
+  font-size: 1em;
+  text-decoration: underline;
+  }
+
+.languages {
+  padding-top: 1vmin;
+}
+
+.technologies {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .technologies {
+    flex-direction: row;
+  }
+  .right {
+    padding-left: 5vmin;
+  }
 }

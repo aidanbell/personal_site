@@ -12,8 +12,8 @@ class Home extends Component {
           <div class="home-container">
             <h1 class="name">/ab/</h1>
           </div>
-          <i class="material-icons" id="down" style={{fontSize: '102px', cursor: 'pointer'}} onClick={() => {this.props.scroll(this.props.scrollRef)}}>arrow_downward</i>
-        </div>
+            <i class="material-icons" id="down" style={{fontSize: '10vmin', cursor: 'pointer'}} onClick={() => {this.props.scroll(this.props.scrollRef)}}>arrow_downward</i>
+          </div>
       </div>
     )
   }
