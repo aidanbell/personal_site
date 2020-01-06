@@ -1,7 +1,19 @@
+@media only screen and (min-width: 768px) {
+  .About {
+    height: 100vh;
+  }
+  .technologies {
+    flex-direction: row;
+  }
+  .right {
+    padding-left: 5vmin;
+  }
+}
+
 .About {
   display: flex;
   flex-direction: row;
-  height: 100vmin;
+  height: 100vh;
   background-color: rgb(229, 230, 213);
 }
 
@@ -60,13 +72,4 @@ h2 {
 .technologies {
   display: flex;
   flex-direction: column;
-}
-
-@media only screen and (min-width: 768px) {
-  .technologies {
-    flex-direction: row;
-  }
-  .right {
-    padding-left: 5vmin;
-  }
 }

@@ -66,7 +66,6 @@ function About() {
               <div class="languages">
                 <i title="Bootstrap" class="logo devicon-bootstrap-plain-wordmark"></i>
                 <i title="JQuery" class="logo devicon-jquery-plain-wordmark"></i>
-                
               </div>
             </div>
           </div>
