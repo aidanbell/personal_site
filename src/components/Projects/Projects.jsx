@@ -9,7 +9,9 @@ class Projects extends Component {
   constructor() {
     super();
     this.state = {
-      drinksImages: ImageLoader(),
+      drinksImages: ImageLoader()[0],
+      cageImages: ImageLoader()[1],
+      tattooImages: ImageLoader()[2],
       photoIndex: 0,
       isOpen: false
     }
@@ -34,9 +36,7 @@ class Projects extends Component {
           <div className="carousel-item active">
             <div className="inner1">
               <div className="content">
-                <h2>Tattoo Shop</h2>
-                <h3>Technologies Used:</h3>
-                <h4>React.js, Express.js, MongoDB, Token-Based Auth</h4>
+                <h3>Tattoo Shop</h3>
                 <h3>The Idea:</h3>
                 <p>
                   A personal friend of mine who runs a tattoo studio was lamenting on
@@ -47,15 +47,42 @@ class Projects extends Component {
                   of the request (Accepted, Payment Pending, etc) to better track all appointments
                   through their respective phases.
                 </p>
+                <h3>The Technical Stuff:</h3>
+                <p>
+                  This project was built using the MERN Stack, using AJAX calls to allow the
+                  React front-end to communicate with the Express back-end and MongoDB hosted on
+                  Atlas. It also uses Token-Based Authentication to allow a range of user options,
+                  including levels of administration including Customer, Artist, and Reception/Apprentice.
+                </p>
+                <div>
+                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.tattooImages[0].src} onClick={() => this.setState({ isOpen: true })}/>
+                  {isOpen && (
+                    <Lightbox
+                      mainSrc={this.state.tattooImages[photoIndex].src}
+                      nextSrc={this.state.tattooImages[(photoIndex + 1) % this.state.tattooImages.length].src}
+                      prevSrc={this.state.tattooImages[(photoIndex + this.state.tattooImages.length - 1) % this.state.tattooImages.length].src}
+                      onCloseRequest={() => this.setState({ isOpen: false })}
+                      onMovePrevRequest={() =>
+                        this.setState({
+                          photoIndex: (photoIndex + this.state.tattooImages.length - 1) % this.state.tattooImages.length,
+                        })
+                      }
+                      onMoveNextRequest={() =>
+                        this.setState({
+                          photoIndex: (photoIndex + 1) % this.state.tattooImages.length,
+                        })
+                      }
+                      reactModalStyle={styles}
+                    />
+                  )}
+                </div>
               </div>
             </div>
           </div>
           <div className="carousel-item">
             <div className="inner2">
               <div className="content">
-                <h2>Let's Grab Drinks</h2>
-                <h3>Technologies Used:</h3>
-                <h4>Python, Django, PostgreSQL</h4>
+                <h3>Let's Grab Drinks</h3>
                 <h3>The Idea:</h3>
                 <p>
                   The concept of the project was to create a tool what would simplify the
@@ -65,9 +92,14 @@ class Projects extends Component {
                   find something that works for everyone. We implimented a messaging feature
                   to allow attendees to easily communicate with eachother.
                 </p>
+                <h3>The Technical Stuff:</h3>
+                <p>
+                  This project was built on a Python/Django stack, and uses PostgreSQL to persist
+                  data in the back-end. It utilizes Django's built-in authentication to allow
+                  the restriction of user privledges.
+                </p>
                 <div>
                   <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.drinksImages[0].src} onClick={() => this.setState({ isOpen: true })}/>
-
                   {isOpen && (
                     <Lightbox
                       mainSrc={this.state.drinksImages[photoIndex].src}
@@ -94,20 +126,47 @@ class Projects extends Component {
           <div className="carousel-item">
             <div className="inner3">
               <div className="content">
-                <h2>The Cage Page</h2>
-                <h3>Technologies Used:</h3>
-                <h4>Node.js, Express.js, MongoDB, OAuth2, APIs</h4>
+                <h3>The Cage Page</h3>
                 <h3>The Idea:</h3>
                 <p>
-                  About two years ago, a group of friends and I started on a journey to watch
+                  Two years ago, some masochistic friends and I decided to watch
                   as many terrible Nicholas Cage movies as we could stomach. We quickly
-                  discovered that the only way that we would survive the ordeal was if we came
-                  up with a drinking game to go alongside each movie. Using the OMDB API, I
-                  created a tool that would not only help us accomplish this, but also would allow
-                  us to share our misery with others. The Cage Page allows users to view a list of
-                  all of Nicholas Cages movies, along with a synopsis and rating, add them to their
-                  own personal "Watched" list, and then add drinking game rules for those movies.
+                  discovered that the only way to survive the ordeal was to create
+                  a drinking game for each one. I created a tool that would not only help
+                  us accomplish this, but would also allow us to share our misery with others.
+                  The Cage Page allows users to view a list of Nicholas Cages movies - along
+                  with synopses and ratings - add them to their own personal "Watched" list,
+                  and then add their own drinking game rules.
                 </p>
+                <h3>The Technical Stuff:</h3>
+                <p>
+                  This project was built using a Node/Express Javascript stack, with a database
+                  using MongoDB hosted on Atlas. The site makes multiple calls to OMDB (The Open
+                  Movie Database) to display both a collection of films, as well as more details on
+                  each movie. Users are authenticated using Google's OAuth2.
+                </p>
+                <div>
+                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.cageImages[0].src} onClick={() => this.setState({ isOpen: true })}/>
+                  {isOpen && (
+                    <Lightbox
+                      mainSrc={this.state.cageImages[photoIndex].src}
+                      nextSrc={this.state.cageImages[(photoIndex + 1) % this.state.cageImages.length].src}
+                      prevSrc={this.state.cageImages[(photoIndex + this.state.cageImages.length - 1) % this.state.cageImages.length].src}
+                      onCloseRequest={() => this.setState({ isOpen: false })}
+                      onMovePrevRequest={() =>
+                        this.setState({
+                          photoIndex: (photoIndex + this.state.cageImages.length - 1) % this.state.cageImages.length,
+                        })
+                      }
+                      onMoveNextRequest={() =>
+                        this.setState({
+                          photoIndex: (photoIndex + 1) % this.state.cageImages.length,
+                        })
+                      }
+                      reactModalStyle={styles}
+                    />
+                  )}
+                </div>
               </div>
             </div>
           </div>

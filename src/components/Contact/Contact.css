@@ -1,3 +1,23 @@
 .Contact {
   height: 100vh;
+  background-color: rgb(229, 230, 213);
+}
+
+#contact-form {
+  padding: 5vmin;
+  border: 1px solid black;
+  margin: 5vmin;
+  margin-top: 0;
+  width: 50%;
+  background-color: #356c9c;
+}
+
+label {
+  font-size: 2.5em;
+  padding: 1vmin;
+  margin-top: 1vmin;
+}
+
+.btn {
+  margin-top: 2vmin;
 }

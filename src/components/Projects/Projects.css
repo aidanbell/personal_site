@@ -1,29 +1,38 @@
+.Projects {
+  height: 100vh;
+}
+
 .inner1 {
-  background-color: rgb(140, 140, 140);
+  background-color: rgb(150, 150, 150);
   height: 100vh;
 }
 
 .inner2 {
-  background-color: rgb(101, 101, 101);
+  background-color: rgb(130, 130, 130);
   height: 100vh;
 }
 
 .inner3 {
-  background-color: rgb(71, 71, 71);
+  background-color: rgb(101, 101, 101);
   height: 100vh;
 }
 
+
 .content {
-  width: 50%;
+  width: 65%;
   margin: auto;
-  padding-top: 100px;
+  padding-top: 5vmin;
 }
 
 .content > p {
-  font-size: 18px;
+  font-size: 1.8em;
 }
 
+.carousel-indicators {
+  bottom: 4em;
+}
 
 .img-thumbnail {
   cursor: pointer;
+  width: 80%;
 }
