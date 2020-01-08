@@ -9,7 +9,15 @@ class Home extends Component {
       <div class="Home">
         <div id="particles-js">
           <div class="home-container">
-            <h1 class="name">/ab/</h1>
+            <p class="name">/ab/</p>
+            <div class="mobile-nav">
+              <ul class="home-nav">
+                <li><a href="#Home"><span>Home</span></a></li>
+                <li><a href="#About"><span>About Me</span></a></li>
+                <li><a href="#Projects"><span>Projects</span></a></li>
+                <li><a href="#Contact"><span>Contact</span></a></li>
+              </ul>
+            </div>
           </div>
             <i class="material-icons" id="down" style={{fontSize: '10vmin', cursor: 'pointer'}} onClick={() => {this.props.scroll(this.props.scrollRef)}}>arrow_downward</i>
           </div>

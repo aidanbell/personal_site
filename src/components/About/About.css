@@ -1,20 +1,5 @@
-@media only screen and (min-width: 768px) {
-  .About {
-    height: 100vh;
-  }
-  .technologies {
-    flex-direction: row;
-  }
-  .right {
-    padding-left: 5vmin;
-  }
-}
-
 .About {
-  display: flex;
-  flex-direction: row;
   height: 100vh;
-  background-color: rgb(229, 230, 213);
 }
 
 .Nav {
@@ -33,6 +18,63 @@
   background-color: none;
 }
 
+.vr {
+  border-top: 10px solid rgba(0,0,0,0);
+  border-bottom: 10px solid rgba(0,0,0,0);
+  border-right: 10px solid #ffe100;
+  height: 600px;
+  margin: auto 0px;
+}
+
+.About {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: rgb(229, 230, 213);
+}
+
+@media only screen and (max-width: 768px) {
+  .technologies {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6em;
+  }
+  .Nav {
+    margin-left: auto;
+  }
+  .brand-statement {
+    padding: 3vmin;
+    font-size: 1.6em;
+  }
+  #education {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 2em;
+    padding: 1vmin;
+  }
+  .vr {
+    border-top: 6px solid rgba(0,0,0,0);
+    border-bottom: 6px solid rgba(0,0,0,0);
+    border-right: 6px solid #ffe100;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .technologies {
+    display: flex;
+    flex-direction: column;
+  }
+  .right {
+    padding-left: 5vmin;
+  }
+
+}
+
+
+
+
 .tab-content {
   margin: auto;
   width: 60%;
@@ -43,13 +85,6 @@
   text-align: justify;
 }
 
-.vr {
-  border-top: 10px solid rgba(0,0,0,0);
-  border-bottom: 10px solid rgba(0,0,0,0);
-  border-right: 10px solid #ffe100;
-  height: 600px;
-  margin: auto 0px;
-}
 
 .logo {
   font-size: 2em;
@@ -66,10 +101,5 @@ h2 {
   }
 
 .languages {
-  padding-top: 1vmin;
-}
-
-.technologies {
-  display: flex;
-  flex-direction: column;
+  padding: 1vmin;
 }
