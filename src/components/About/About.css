@@ -64,7 +64,7 @@
 @media only screen and (min-width: 769px) {
   .technologies {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   .right {
     padding-left: 5vmin;
