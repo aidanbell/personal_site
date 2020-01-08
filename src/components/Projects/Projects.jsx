@@ -13,12 +13,14 @@ class Projects extends Component {
       cageImages: ImageLoader()[1],
       tattooImages: ImageLoader()[2],
       photoIndex: 0,
-      isOpen: false
+      tattooIsOpen: false,
+      drinksIsOpen: false,
+      cageIsOpen: false
     }
   }
 
   render() {
-  const { photoIndex, isOpen } = this.state;
+  const { photoIndex, tattooIsOpen, drinksIsOpen, cageIsOpen } = this.state;
   const styles = {
     content: {
       top: '10%'
@@ -55,13 +57,14 @@ class Projects extends Component {
                   including levels of administration including Customer, Artist, and Reception/Apprentice.
                 </p>
                 <div>
-                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.tattooImages[0].src} onClick={() => this.setState({ isOpen: true })}/>
-                  {isOpen && (
+                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.tattooImages[0].src} onClick={() => this.setState({ tattooIsOpen: true })}/>
+                  {tattooIsOpen && (
                     <Lightbox
+                      enableZoom={false}
                       mainSrc={this.state.tattooImages[photoIndex].src}
                       nextSrc={this.state.tattooImages[(photoIndex + 1) % this.state.tattooImages.length].src}
                       prevSrc={this.state.tattooImages[(photoIndex + this.state.tattooImages.length - 1) % this.state.tattooImages.length].src}
-                      onCloseRequest={() => this.setState({ isOpen: false })}
+                      onCloseRequest={() => this.setState({ tattooIsOpen: false })}
                       onMovePrevRequest={() =>
                         this.setState({
                           photoIndex: (photoIndex + this.state.tattooImages.length - 1) % this.state.tattooImages.length,
@@ -99,13 +102,14 @@ class Projects extends Component {
                   the restriction of user privledges.
                 </p>
                 <div>
-                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.drinksImages[0].src} onClick={() => this.setState({ isOpen: true })}/>
-                  {isOpen && (
+                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.drinksImages[0].src} onClick={() => this.setState({ drinksIsOpen: true })}/>
+                  {drinksIsOpen && (
                     <Lightbox
+                      enableZoom={false}
                       mainSrc={this.state.drinksImages[photoIndex].src}
                       nextSrc={this.state.drinksImages[(photoIndex + 1) % this.state.drinksImages.length].src}
                       prevSrc={this.state.drinksImages[(photoIndex + this.state.drinksImages.length - 1) % this.state.drinksImages.length].src}
-                      onCloseRequest={() => this.setState({ isOpen: false })}
+                      onCloseRequest={() => this.setState({ drinksIsOpen: false })}
                       onMovePrevRequest={() =>
                         this.setState({
                           photoIndex: (photoIndex + this.state.drinksImages.length - 1) % this.state.drinksImages.length,
@@ -146,13 +150,14 @@ class Projects extends Component {
                   each movie. Users are authenticated using Google's OAuth2.
                 </p>
                 <div>
-                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.cageImages[0].src} onClick={() => this.setState({ isOpen: true })}/>
-                  {isOpen && (
+                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.cageImages[0].src} onClick={() => this.setState({ cageIsOpen: true })}/>
+                  {cageIsOpen && (
                     <Lightbox
+                      enableZoom={false}
                       mainSrc={this.state.cageImages[photoIndex].src}
                       nextSrc={this.state.cageImages[(photoIndex + 1) % this.state.cageImages.length].src}
                       prevSrc={this.state.cageImages[(photoIndex + this.state.cageImages.length - 1) % this.state.cageImages.length].src}
-                      onCloseRequest={() => this.setState({ isOpen: false })}
+                      onCloseRequest={() => this.setState({ cageIsOpen: false })}
                       onMovePrevRequest={() =>
                         this.setState({
                           photoIndex: (photoIndex + this.state.cageImages.length - 1) % this.state.cageImages.length,

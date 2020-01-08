@@ -1,6 +1,7 @@
 .Contact {
   height: 100vh;
   background-color: rgb(229, 230, 213);
+  padding: 4vmin;
 }
 
 #contact-form {

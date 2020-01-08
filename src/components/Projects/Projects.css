@@ -1,3 +1,4 @@
+
 .Projects {
   height: 100vh;
 }
@@ -24,15 +25,23 @@
   padding-top: 5vmin;
 }
 
-.content > p {
-  font-size: 1.8em;
+@media only screen and (max-width: 900px) {
+  .content > p {
+    font-size: 1em;
+  }
 }
 
-.carousel-indicators {
-  bottom: 4em;
-}
+@media only screen and (min-width: 901px) {
+  .content > p {
+    font-size: 1.6em;
+  }
 
-.img-thumbnail {
-  cursor: pointer;
-  width: 80%;
+  .carousel-indicators {
+    bottom: 4em;
+  }
+
+  .img-thumbnail {
+    cursor: pointer;
+    width: 80%;
+  }
 }
