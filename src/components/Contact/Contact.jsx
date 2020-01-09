@@ -3,6 +3,7 @@ import * as emailjs from 'emailjs-com';
 
 import './Contact.css';
 
+
 class Contact extends Component {
   constructor(){
   super()
@@ -52,6 +53,10 @@ class Contact extends Component {
         <div className="contact-form">
           <form id="contact-form" onSubmit={this.handleSubmit}>
             <h3>Get in touch!</h3>
+            <p>
+              Just put your name and an email where I can reach you, and a little message to say "Hey"! I'll
+              do my best to get back to you as soon as I can! Thanks!
+            </p>
             <div class="form-row">
               <label>Name</label>
               <input class="form-control" type="text" id="name"name="name" value={this.state.name} onChange={this.handleChange}/>
@@ -64,6 +69,19 @@ class Contact extends Component {
             </div>
             <input class="btn btn-outline-dark" type="submit" value="Send"/>
           </form>
+        </div>
+        <div className="contact-links">
+          <div className="links">
+            <h3>Find me elsewhere!</h3>
+            <ul>
+              <li><a href="https://github.com/aidanbell/">GitHub</a></li>
+              <li><a href="https://linkedin.com/in/aidanbell0/">Linked In</a></li>
+            </ul>
+          </div>
+          <div className="resume">
+            <h3>Skip the middleman, and download my Resume!</h3>
+            <a href="/Aidan_Bell.pdf" download><img class="img-fluid img-thumbnail" src="/resume_thumb.png"></img></a>
+          </div>
         </div>
       </div>
 
