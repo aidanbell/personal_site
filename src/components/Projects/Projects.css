@@ -18,11 +18,20 @@
   height: 100vh;
 }
 
+.title {
+  font-size: 5em;
+  text-transform: uppercase;
+}
 
 .content {
   width: 65%;
   margin: auto;
   padding-top: 5vmin;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
 }
 
 @media only screen and (max-width: 768px) {

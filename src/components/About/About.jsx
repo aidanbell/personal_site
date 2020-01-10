@@ -23,13 +23,13 @@ function About() {
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="brand" role="tabpanel" aria-labelledby="home-tab">
           <p class="brand-statement">
-            "Curious and detail-oriented, I tend to approach problems with
+            Curious and detail-oriented, I tend to approach problems with
             creativity and efficiency first, and enjoy tinkering with the latest
             technologies. After studying literature and poetry, I recognized that
             my enjoyment of deconstructing and analyzing large pieces of writing
             was mirrored in the world of programming. I view my place in the field
             of software engineering as one in which I have room to grow, and
-            satiate my desire to never stop learning."
+            satiate my desire to never stop learning.
           </p>
         </div>
         <div class="tab-pane fade" id="technologies" role="tabpanel" aria-labelledby="technologies-tab">

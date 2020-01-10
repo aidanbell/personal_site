@@ -38,7 +38,7 @@ class Projects extends Component {
           <div className="carousel-item active">
             <div className="inner1">
               <div className="content">
-                <h3>Tattoo Shop</h3>
+                <h3 class="title">Tattoo Shop</h3>
                 <h3>The Idea:</h3>
                 <p>
                   A personal friend of mine who runs a tattoo studio was lamenting on
@@ -57,7 +57,7 @@ class Projects extends Component {
                   including levels of administration including Customer, Artist, and Reception/Apprentice.
                 </p>
                 <div>
-                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.tattooImages[0].src} onClick={() => this.setState({ tattooIsOpen: true })}/>
+                  <img className="img-thumbnail img-fluid" title="Click for More" alt="tattooshop images" src={this.state.tattooImages[0].src} onClick={() => this.setState({ tattooIsOpen: true })}/>
                   {tattooIsOpen && (
                     <Lightbox
                       enableZoom={false}
@@ -85,24 +85,24 @@ class Projects extends Component {
           <div className="carousel-item">
             <div className="inner2">
               <div className="content">
-                <h3>Let's Grab Drinks</h3>
-                <h3>The Idea:</h3>
-                <p>
-                  The concept of the project was to create a tool what would simplify the
-                  process of organizing a group of friends to meet up for drinks. My teammate
-                  and I wanted a one-stop webapp where users could log in, create events, and
-                  invite their friends to attend, or weigh-in on the location or time to help
-                  find something that works for everyone. We implimented a messaging feature
-                  to allow attendees to easily communicate with eachother.
-                </p>
-                <h3>The Technical Stuff:</h3>
-                <p>
-                  This project was built on a Python/Django stack, and uses PostgreSQL to persist
-                  data in the back-end. It utilizes Django's built-in authentication to allow
-                  the restriction of user privledges.
-                </p>
+                <h3 class="title">Let's Grab Drinks</h3>
+                  <h3>The Idea:</h3>
+                    <p>
+                      The concept of the project was to create a tool what would simplify the
+                      process of organizing a group of friends to meet up for drinks. My teammate
+                      and I wanted a one-stop webapp where users could log in, create events, and
+                      invite their friends to attend, or weigh-in on the location or time to help
+                      find something that works for everyone. We implimented a messaging feature
+                      to allow attendees to easily communicate with eachother.
+                    </p>
+                  <h3>The Technical Stuff:</h3>
+                    <p>
+                      This project was built on a Python/Django stack, and uses PostgreSQL to persist
+                      data in the back-end. It utilizes Django's built-in authentication to allow
+                      the restriction of user privledges.
+                    </p>
                 <div>
-                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.drinksImages[0].src} onClick={() => this.setState({ drinksIsOpen: true })}/>
+                  <img className="img-thumbnail img-fluid" title="Click for More" alt="drinksImages" src={this.state.drinksImages[0].src} onClick={() => this.setState({ drinksIsOpen: true })}/>
                   {drinksIsOpen && (
                     <Lightbox
                       enableZoom={false}
@@ -130,7 +130,7 @@ class Projects extends Component {
           <div className="carousel-item">
             <div className="inner3">
               <div className="content">
-                <h3>The Cage Page</h3>
+                <h3 class="title">The Cage Page</h3>
                 <h3>The Idea:</h3>
                 <p>
                   Two years ago, some masochistic friends and I decided to watch
@@ -150,7 +150,7 @@ class Projects extends Component {
                   each movie. Users are authenticated using Google's OAuth2.
                 </p>
                 <div>
-                  <img className="img-thumbnail img-fluid" title="Click for More" src={this.state.cageImages[0].src} onClick={() => this.setState({ cageIsOpen: true })}/>
+                  <img className="img-thumbnail img-fluid" title="Click for More" alt="cageImages" src={this.state.cageImages[0].src} onClick={() => this.setState({ cageIsOpen: true })}/>
                   {cageIsOpen && (
                     <Lightbox
                       enableZoom={false}

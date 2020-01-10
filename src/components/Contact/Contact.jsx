@@ -65,7 +65,7 @@ class Contact extends Component {
             </div>
             <div class="form-row">
               <label>Message</label>
-              <textarea class="form-control-lg form-control" name="message" value={this.state.message} onChange={this.handleChange}></textarea>
+              <textarea class="form-control" name="message" value={this.state.message} onChange={this.handleChange}></textarea>
             </div>
             <input class="btn btn-outline-dark" type="submit" value="Send"/>
           </form>
@@ -73,14 +73,14 @@ class Contact extends Component {
         <div className="contact-links">
           <div className="links">
             <h3>Find me elsewhere!</h3>
-            <ul>
-              <li><a href="https://github.com/aidanbell/">GitHub</a></li>
-              <li><a href="https://linkedin.com/in/aidanbell0/">Linked In</a></li>
-            </ul>
+            <div class="icons">
+              <a href="https://github.com/aidanbell/"><img alt="github logo" class="link-icon" src="/github.svg"></img></a>
+              <a href="https://linkedin.com/in/aidanbell0/"><img alt="linkedin logo" class="link-icon" src="/linkedin.svg"></img></a>
+            </div>
           </div>
           <div className="resume">
             <h3>Skip the middleman, and download my Resume!</h3>
-            <a href="/Aidan_Bell.pdf" download><img class="img-fluid img-thumbnail" src="/resume_thumb.png"></img></a>
+            <a href="/Aidan_Bell.pdf" download><img class="img-fluid" src="/resume_thumb.png" alt="Download my resume"></img></a>
           </div>
         </div>
       </div>

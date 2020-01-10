@@ -21,7 +21,7 @@
 .vr {
   border-top: 10px solid rgba(0,0,0,0);
   border-bottom: 10px solid rgba(0,0,0,0);
-  border-right: 10px solid #ffe100;
+  border-right: 10px solid #0F4C81;
   height: 600px;
   margin: auto 0px;
 }
@@ -56,7 +56,7 @@
   .vr {
     border-top: 6px solid rgba(0,0,0,0);
     border-bottom: 6px solid rgba(0,0,0,0);
-    border-right: 6px solid #ffe100;
+    border-right: 6px solid #0F4C81;
     height: 300px;
   }
 }
@@ -72,15 +72,16 @@
 
 }
 
-
+.left > h2,
+.right > h2 {
+  padding-left: 7px;
+}
 
 
 .tab-content {
   margin: auto;
   width: 60%;
   font-size: 2vw;
-  font-style: italic;
-  font-weight: lighter;
   color: #343A40;
   text-align: justify;
 }
